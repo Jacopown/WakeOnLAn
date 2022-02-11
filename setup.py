@@ -6,13 +6,14 @@ setup(
     version='1.0',
     author='Jacopown',
     description='A simple tool for wake-on-lan',
-    py_modules=['wol'],
+    scripts=['wol.py'],
     install_requires=[
         'Click',
     ],
-    entry_points='''
-        [console_scripts]
-        wol=wol:wake
-    ''',
+    entry_points={
+        'console_scripts': [
+            'wol=wol:wake',
+        ]
+    },
 
 )
